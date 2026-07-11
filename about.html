@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Developer - Arvix OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#00E5FF', secondary: '#4F46E5', accent: '#00FFC6', darkbg: '#070B14', cardbg: '#101826', borderline: 'rgba(255,255,255,0.08)', sectext: '#A8B3CF' }, fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-white">
+
+    <div class="cyber-grid"></div>
+    <div class="aurora-glow-2"></div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 border-b border-borderline backdrop-blur-md bg-cardbg/50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <i class="fa-solid fa-shield-halved text-2xl text-primary"></i>
+                <span class="text-xl font-bold tracking-wider">ARVIX OS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-sectext hover:text-white transition-colors">Home</a>
+                <a href="download.html" class="text-sectext hover:text-white transition-colors">Download</a>
+                <a href="about.html" class="text-primary transition-colors">About Developer</a>
+                <a href="contact.html" class="text-sectext hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen pt-32 pb-24 px-6 max-w-6xl mx-auto">
+        
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-4" data-aos="fade-right">
+                <div class="glass-card p-6 rounded-3xl text-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="w-48 h-48 mx-auto rounded-full border-4 border-borderline bg-darkbg mb-6 flex items-center justify-center overflow-hidden">
+                        <i class="fa-solid fa-user-astronaut text-6xl text-sectext"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-1">Aryan Prajapati</h2>
+                    <p class="text-primary font-mono text-sm mb-6">Lead Developer & Architect</p>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full py-3 rounded-lg bg-darkbg border border-borderline hover:border-primary transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-github text-lg"></i> GitHub Profile
+                        </a>
+                        <a href="https://arvixos.online" target="_blank" class="w-full py-3 rounded-lg bg-darkbg border border-borderline hover:border-accent transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-globe text-lg"></i> Official Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 space-y-8" data-aos="fade-left">
+                <div>
+                    <h1 class="text-4xl font-bold mb-6">The <span class="text-gradient">Vision</span></h1>
+                    <div class="glass-card p-8 rounded-2xl relative">
+                        <i class="fa-solid fa-quote-left absolute top-4 left-4 text-3xl text-borderline"></i>
+                        <p class="text-lg text-sectext leading-relaxed italic z-10 relative mt-4">
+                            "I wanted to build a modern Debian-based Linux distribution that combines cybersecurity tools, performance, and an elegant user experience. To provide a fast, secure, privacy-focused Linux distribution for ethical hackers, developers, students, and everyday users while remaining completely open source."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <i class="fa-solid fa-flag-checkered text-2xl text-accent mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Project Genesis</h3>
+                        <p class="text-sectext text-sm">Arvix OS was born out of a need for a unified platform that doesn't compromise aesthetic appeal for deep system control and security.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <i class="fa-solid fa-code-branch text-2xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Core Focus</h3>
+                        <p class="text-sectext text-sm">Engineering a Debian base with a custom XFCE environment, optimizing kernel 6.12 to deliver maximum hardware efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

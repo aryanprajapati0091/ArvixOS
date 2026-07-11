@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Arvix OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#00E5FF', secondary: '#4F46E5', accent: '#00FFC6', darkbg: '#070B14', cardbg: '#101826', borderline: 'rgba(255,255,255,0.08)', sectext: '#A8B3CF' }, fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-white flex flex-col min-h-screen">
+
+    <div class="cyber-grid"></div>
+    <div class="aurora-glow"></div>
+    <div class="aurora-glow-2"></div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 border-b border-borderline backdrop-blur-md bg-cardbg/50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <i class="fa-solid fa-shield-halved text-2xl text-primary"></i>
+                <span class="text-xl font-bold tracking-wider">ARVIX OS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-sectext hover:text-white transition-colors">Home</a>
+                <a href="download.html" class="text-sectext hover:text-white transition-colors">Download</a>
+                <a href="about.html" class="text-sectext hover:text-white transition-colors">About Developer</a>
+                <a href="contact.html" class="text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flex-grow pt-32 pb-24 px-6 flex items-center justify-center">
+        <div class="w-full max-w-5xl grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+            
+            <div class="space-y-8">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in <span class="text-gradient">Touch</span></h1>
+                    <p class="text-sectext text-lg">Have a question, suggestion, or want to contribute to Arvix OS? Send a message.</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <a href="https://github.com/aryanprajapati0091" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-primary transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-borderline">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-sectext">Contribute on GitHub</p>
+                            <p class="font-bold">aryanprajapati0091</p>
+                        </div>
+                    </a>
+                    <a href="https://arvixos.online" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-accent transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-borderline">
+                            <i class="fa-solid fa-globe text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-sectext">Official Website</p>
+                            <p class="font-bold">arvixos.online</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl">
+                <form class="space-y-6" onsubmit="event.preventDefault();">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm text-sectext font-medium">Name</label>
+                            <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm text-sectext font-medium">Email</label>
+                            <input type="email" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm text-sectext font-medium">Subject</label>
+                        <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="How can we help?">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm text-sectext font-medium">Message</label>
+                        <textarea rows="5" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-neon w-full bg-primary text-darkbg font-bold py-4 rounded-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

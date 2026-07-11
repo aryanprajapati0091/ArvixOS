@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Arvix OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { primary: '#00E5FF', secondary: '#4F46E5', accent: '#00FFC6', darkbg: '#070B14', cardbg: '#101826', borderline: 'rgba(255,255,255,0.08)', sectext: '#A8B3CF' }, fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-white">
+
+    <div class="cyber-grid"></div>
+    <div class="aurora-glow"></div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 border-b border-borderline backdrop-blur-md bg-cardbg/50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <i class="fa-solid fa-shield-halved text-2xl text-primary"></i>
+                <span class="text-xl font-bold tracking-wider">ARVIX OS</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-sectext hover:text-white transition-colors">Home</a>
+                <a href="download.html" class="text-primary transition-colors">Download</a>
+                <a href="about.html" class="text-sectext hover:text-white transition-colors">About Developer</a>
+                <a href="contact.html" class="text-sectext hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen pt-32 pb-24 px-6 flex flex-col items-center justify-center">
+        <div class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Get <span class="text-gradient">Arvix OS</span></h1>
+            <p class="text-sectext text-lg">Stable Release. Ready for production.</p>
+        </div>
+
+        <div class="w-full max-w-4xl grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-3xl relative overflow-hidden" data-aos="fade-right">
+                <div class="absolute top-0 right-0 bg-primary text-darkbg text-xs font-bold px-4 py-1 rounded-bl-xl">LATEST</div>
+                
+                <h2 class="text-2xl font-bold mb-2">Version 1.0 Phoenix</h2>
+                <p class="text-sectext text-sm mb-8">Released: 16 July 2026</p>
+                
+                <div class="space-y-4 mb-8 font-mono text-sm">
+                    <div class="flex justify-between border-b border-borderline pb-2">
+                        <span class="text-sectext">ISO File</span>
+                        <span class="text-accent">ArvixOS-1.0-amd64.iso</span>
+                    </div>
+                    <div class="flex justify-between border-b border-borderline pb-2">
+                        <span class="text-sectext">Architecture</span>
+                        <span>64-bit (x86_64)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-borderline pb-2">
+                        <span class="text-sectext">Size</span>
+                        <span>~4 GB</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="https://drive.google.com/file/d/1PnqtcnLm7L5qpppuV0nU1-lSH1HG2Ka7/view?usp=drive_link" class="btn-neon w-full bg-primary text-darkbg py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3">
+    <i class="fa-solid fa-download"></i> Download ISO
+</a>
+                    <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full bg-transparent border border-borderline hover:border-white text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-3 transition-colors">
+                        <i class="fa-brands fa-github text-xl"></i> GitHub Releases
+                    </a>
+                </div>
+                
+                <p class="text-center text-xs text-sectext mt-6 font-mono">Checksum verification (Coming Soon)</p>
+            </div>
+
+            <div class="flex flex-col gap-6" data-aos="fade-left">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-secondary">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-server text-secondary"></i> Minimum Requirements
+                    </h3>
+                    <ul class="space-y-2 text-sm text-sectext">
+                        <li><strong class="text-white">RAM:</strong> 2 GB</li>
+                        <li><strong class="text-white">CPU:</strong> Dual-Core 64-bit Processor</li>
+                        <li><strong class="text-white">Storage:</strong> 25 GB free space</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-rocket text-primary"></i> Recommended
+                    </h3>
+                    <ul class="space-y-2 text-sm text-sectext">
+                        <li><strong class="text-white">RAM:</strong> 4 GB or higher</li>
+                        <li><strong class="text-white">CPU:</strong> Quad-Core 64-bit Processor</li>
+                        <li><strong class="text-white">Storage:</strong> 50 GB SSD</li>
+                        <li><strong class="text-white">Graphics:</strong> OpenGL 3.3 Compatible GPU</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
