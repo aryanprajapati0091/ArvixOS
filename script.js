@@ -40,18 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- NEW: Advanced 3D Tilt Animation for Cards ---
+    // Advanced 3D Tilt Animation for Cards
     const cards = document.querySelectorAll('.glass-card');
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; // x position within the element
-            const y = e.clientY - rect.top;  // y position within the element
+            const x = e.clientX - rect.left; 
+            const y = e.clientY - rect.top;  
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             
-            // Calculate rotation amount based on mouse position
-            const rotateX = ((y - centerY) / centerY) * -8; // Max rotation 8deg
+            const rotateX = ((y - centerY) / centerY) * -8; 
             const rotateY = ((x - centerX) / centerX) * 8;
             
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
