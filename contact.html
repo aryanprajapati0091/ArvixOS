@@ -10,26 +10,18 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    tailwind.config = {
-        theme: { 
-            extend: { 
-                colors: { 
-                    primary: '#FF6B00',      /* Vibrant Cyber Orange */
-                    secondary: '#FF0055',    /* Cyber Pink */
-                    accent: '#FFB300',       /* Amber Glow */
-                    darkbg: '#0A0503',       /* Very dark warm brown/black */
-                    cardbg: '#140A05',       /* Slightly lighter card background */
-                    borderline: 'rgba(255,107,0,0.15)', 
-                    sectext: '#E5D3C8'       /* Warmer secondary text */
-                }, 
-                fontFamily: { 
-                    sans: ['Inter', 'sans-serif'], 
-                    mono: ['JetBrains Mono', 'monospace'] 
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        primary: '#00F0FF', secondary: '#A855F7', accent: '#3B82F6', 
+                        darkbg: '#030510', cardbg: '#0A0F24', borderline: 'rgba(168,85,247,0.15)', sectext: '#94A3B8'
+                    }, 
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } 
                 } 
-            } 
+            }
         }
-    }
-</script>
+    </script>
 </head>
 <body class="font-sans antialiased text-white flex flex-col min-h-screen">
 
@@ -62,7 +54,7 @@
                 </div>
                 
                 <div class="space-y-4">
-                    <a href="https://github.com/aryanprajapati0091" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-primary transition-colors">
+                    <a href="https://github.com/aryanprajapati0091" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-secondary transition-colors">
                         <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-borderline">
                             <i class="fa-brands fa-github text-xl"></i>
                         </div>
@@ -71,7 +63,7 @@
                             <p class="font-bold">aryanprajapati0091</p>
                         </div>
                     </a>
-                    <a href="https://arvixos.online" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-accent transition-colors">
+                    <a href="https://arvixos.online" target="_blank" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-primary transition-colors">
                         <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-borderline">
                             <i class="fa-solid fa-globe text-xl"></i>
                         </div>
@@ -88,22 +80,22 @@
                     <div class="grid grid-cols-2 gap-6">
                         <div class="space-y-2">
                             <label class="text-sm text-sectext font-medium">Name</label>
-                            <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe">
+                            <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="John Doe">
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm text-sectext font-medium">Email</label>
-                            <input type="email" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com">
+                            <input type="email" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="john@example.com">
                         </div>
                     </div>
                     <div class="space-y-2">
                         <label class="text-sm text-sectext font-medium">Subject</label>
-                        <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="How can we help?">
+                        <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="How can we help?">
                     </div>
                     <div class="space-y-2">
                         <label class="text-sm text-sectext font-medium">Message</label>
-                        <textarea rows="5" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Write your message here..."></textarea>
+                        <textarea rows="5" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Write your message here..."></textarea>
                     </div>
-                    <button type="submit" class="btn-neon w-full bg-primary text-darkbg font-bold py-4 rounded-lg flex items-center justify-center gap-2">
+                    <button type="submit" class="btn-neon w-full bg-secondary text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane"></i> Send Message
                     </button>
                 </form>
