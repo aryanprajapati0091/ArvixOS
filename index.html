@@ -11,29 +11,29 @@
     <link rel="stylesheet" href="style.css">
     
     <script src="https://cdn.tailwindcss.com"></script>
-     <script>
-    tailwind.config = {
-        theme: { 
-            extend: { 
-                colors: { 
-                    primary: '#FF6B00',      /* Vibrant Cyber Orange */
-                    secondary: '#FF0055',    /* Cyber Pink */
-                    accent: '#FFB300',       /* Amber Glow */
-                    darkbg: '#0A0503',       /* Very dark warm brown/black */
-                    cardbg: '#140A05',       /* Slightly lighter card background */
-                    borderline: 'rgba(255,107,0,0.15)', 
-                    sectext: '#E5D3C8'       /* Warmer secondary text */
-                }, 
-                fontFamily: { 
-                    sans: ['Inter', 'sans-serif'], 
-                    mono: ['JetBrains Mono', 'monospace'] 
+    <script>
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        primary: '#00F0FF',
+                        secondary: '#A855F7',
+                        accent: '#3B82F6',
+                        darkbg: '#030510',
+                        cardbg: '#0A0F24',
+                        borderline: 'rgba(168,85,247,0.15)', 
+                        sectext: '#94A3B8'
+                    }, 
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        mono: ['JetBrains Mono', 'monospace'] 
+                    } 
                 } 
-            } 
+            }
         }
-    }
-</script>
+    </script>
 </head>
-<body class="font-sans antialiased text-white selection:bg-primary selection:text-darkbg">
+<body class="font-sans antialiased text-white selection:bg-secondary selection:text-white">
 
     <div class="cyber-grid"></div>
     <div class="aurora-glow"></div>
@@ -42,7 +42,7 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
-                <i class="fa-solid fa-shield-halved text-2xl text-primary group-hover:text-accent transition-colors"></i>
+                <i class="fa-solid fa-shield-halved text-2xl text-primary group-hover:text-secondary transition-colors"></i>
                 <span class="text-xl font-bold tracking-wider text-gradient">ARVIX OS</span>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -51,16 +51,16 @@
                 <a href="about.html" class="text-sectext hover:text-white transition-colors">About Developer</a>
                 <a href="contact.html" class="text-sectext hover:text-white transition-colors">Contact</a>
             </div>
-            <a href="download.html" class="btn-neon bg-primary/10 border border-primary text-primary px-6 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-darkbg">
-                Download Now
+            <a href="download.html" class="btn-neon bg-secondary/10 border border-secondary text-secondary px-6 py-2 rounded-full text-sm font-bold hover:bg-secondary hover:text-white">
+                Download v2.0
             </a>
         </div>
     </nav>
 
     <section class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6 relative">
         <div class="max-w-5xl mx-auto text-center z-10">
-            <div class="hero-badge inline-block px-4 py-1.5 rounded-full border border-borderline bg-cardbg/50 backdrop-blur-sm text-xs font-mono text-accent mb-6">
-                <i class="fa-solid fa-bolt mr-2"></i> Version 1.0 is now stable
+            <div class="hero-badge inline-block px-4 py-1.5 rounded-full border border-borderline bg-cardbg/50 backdrop-blur-sm text-xs font-mono text-primary mb-6">
+                <i class="fa-solid fa-bolt mr-2"></i> Version 2.0 is now available
             </div>
             
             <h1 class="hero-title text-6xl md:text-8xl font-bold tracking-tight mb-6 leading-tight">
@@ -74,8 +74,8 @@
             </p>
             
             <div class="hero-btns flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-                <a href="download.html" class="btn-neon w-full sm:w-auto bg-primary text-darkbg px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-download"></i> Get Arvix OS
+                <a href="download.html" class="btn-neon w-full sm:w-auto bg-secondary text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-3 hover:bg-primary">
+                    <i class="fa-solid fa-download"></i> Get Arvix OS 2.0
                 </a>
                 <a href="https://github.com/aryanprajapati0091" target="_blank" class="glass-card w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-white flex items-center justify-center gap-3 hover:text-primary">
                     <i class="fa-brands fa-github text-xl"></i> View on GitHub
@@ -84,16 +84,16 @@
 
             <div class="hero-stats grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 <div class="glass-card p-6 rounded-2xl text-center">
-                    <div class="text-sectext text-xs font-mono uppercase mb-1">Version</div>
-                    <div class="text-xl font-bold text-white">1.0</div>
+                    <div class="text-sectext text-xs font-mono uppercase mb-1">Latest Release</div>
+                    <div class="text-xl font-bold text-white">Version 2.0</div>
                 </div>
                 <div class="glass-card p-6 rounded-2xl text-center">
                     <div class="text-sectext text-xs font-mono uppercase mb-1">Kernel</div>
-                    <div class="text-xl font-bold text-white">Linux 6.12</div>
+                    <div class="text-xl font-bold text-white">Linux 6.12+</div>
                 </div>
                 <div class="glass-card p-6 rounded-2xl text-center">
                     <div class="text-sectext text-xs font-mono uppercase mb-1">Desktop</div>
-                    <div class="text-xl font-bold text-white">XFCE</div>
+                    <div class="text-xl font-bold text-white">XFCE Custom</div>
                 </div>
                 <div class="glass-card p-6 rounded-2xl text-center">
                     <div class="text-sectext text-xs font-mono uppercase mb-1">Architecture</div>
@@ -147,7 +147,7 @@
 
     <section class="py-24 px-6 border-t border-borderline bg-cardbg/20">
         <div class="max-w-7xl mx-auto text-center" data-aos="zoom-in">
-            <h2 class="text-2xl font-mono text-accent mb-12">Ultimate Cyber Security Toolkit Included</h2>
+            <h2 class="text-2xl font-mono text-secondary mb-12">Ultimate Cyber Security Toolkit Included</h2>
             <div class="flex flex-wrap justify-center gap-4">
                 <span class="px-6 py-3 rounded-lg border border-borderline bg-darkbg text-sm font-mono hover:border-primary transition-colors cursor-default">Nmap</span>
                 <span class="px-6 py-3 rounded-lg border border-borderline bg-darkbg text-sm font-mono hover:border-primary transition-colors cursor-default">Wireshark</span>
