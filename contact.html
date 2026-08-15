@@ -76,26 +76,39 @@
             </div>
 
             <div class="glass-card p-8 rounded-3xl">
-                <form class="space-y-6" onsubmit="event.preventDefault();">
+                <!-- Formspree Success/Error UI Elements -->
+                <div data-fs-success class="hidden p-4 mb-6 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 font-medium text-sm">
+                    <i class="fa-solid fa-circle-check mr-2"></i> Message sent successfully! I'll get back to you soon.
+                </div>
+                <div data-fs-error class="hidden p-4 mb-6 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 font-medium text-sm">
+                    <i class="fa-solid fa-circle-exclamation mr-2"></i> There was an error sending your message. Please check the fields below.
+                </div>
+
+                <!-- Formspree Ajax Form -->
+                <form id="arvix-contact-form" class="space-y-6">
                     <div class="grid grid-cols-2 gap-6">
                         <div class="space-y-2">
-                            <label class="text-sm text-sectext font-medium">Name</label>
-                            <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="John Doe">
+                            <label for="name" class="text-sm text-sectext font-medium">Name</label>
+                            <input type="text" id="name" name="name" required data-fs-field class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="John Doe">
+                            <span data-fs-error="name" class="text-xs text-red-400 mt-1 block"></span>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-sm text-sectext font-medium">Email</label>
-                            <input type="email" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="john@example.com">
+                            <label for="email" class="text-sm text-sectext font-medium">Email</label>
+                            <input type="email" id="email" name="email" required data-fs-field class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="john@example.com">
+                            <span data-fs-error="email" class="text-xs text-red-400 mt-1 block"></span>
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-sm text-sectext font-medium">Subject</label>
-                        <input type="text" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="How can we help?">
+                        <label for="subject" class="text-sm text-sectext font-medium">Subject</label>
+                        <input type="text" id="subject" name="subject" required data-fs-field class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="How can we help?">
+                        <span data-fs-error="subject" class="text-xs text-red-400 mt-1 block"></span>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-sm text-sectext font-medium">Message</label>
-                        <textarea rows="5" class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Write your message here..."></textarea>
+                        <label for="message" class="text-sm text-sectext font-medium">Message</label>
+                        <textarea id="message" name="message" rows="5" required data-fs-field class="w-full bg-darkbg border border-borderline rounded-lg px-4 py-3 text-white focus:outline-none focus:border-secondary transition-colors resize-none" placeholder="Write your message here..."></textarea>
+                        <span data-fs-error="message" class="text-xs text-red-400 mt-1 block"></span>
                     </div>
-                    <button type="submit" class="btn-neon w-full bg-secondary text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2">
+                    <button type="submit" data-fs-submit-btn class="btn-neon w-full bg-secondary text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
                         <i class="fa-solid fa-paper-plane"></i> Send Message
                     </button>
                 </form>
@@ -106,5 +119,12 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Formspree Ajax Initialization -->
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#arvix-contact-form', formId: 'xkjwvjqq' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
