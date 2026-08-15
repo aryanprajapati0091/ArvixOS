@@ -9,27 +9,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-   <script>
-    tailwind.config = {
-        theme: { 
-            extend: { 
-                colors: { 
-                    primary: '#FF6B00',      /* Vibrant Cyber Orange */
-                    secondary: '#FF0055',    /* Cyber Pink */
-                    accent: '#FFB300',       /* Amber Glow */
-                    darkbg: '#0A0503',       /* Very dark warm brown/black */
-                    cardbg: '#140A05',       /* Slightly lighter card background */
-                    borderline: 'rgba(255,107,0,0.15)', 
-                    sectext: '#E5D3C8'       /* Warmer secondary text */
-                }, 
-                fontFamily: { 
-                    sans: ['Inter', 'sans-serif'], 
-                    mono: ['JetBrains Mono', 'monospace'] 
+    <script>
+        tailwind.config = {
+            theme: { 
+                extend: { 
+                    colors: { 
+                        primary: '#00F0FF', secondary: '#A855F7', accent: '#3B82F6', 
+                        darkbg: '#030510', cardbg: '#0A0F24', borderline: 'rgba(168,85,247,0.15)', sectext: '#94A3B8'
+                    }, 
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } 
                 } 
-            } 
+            }
         }
-    }
-</script>
+    </script>
 </head>
 <body class="font-sans antialiased text-white">
 
@@ -56,7 +48,7 @@
         <div class="grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-4" data-aos="fade-right">
                 <div class="glass-card p-6 rounded-3xl text-center relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="w-48 h-48 mx-auto rounded-full border-4 border-borderline bg-darkbg mb-6 flex items-center justify-center overflow-hidden">
                         <i class="fa-solid fa-user-astronaut text-6xl text-sectext"></i>
                     </div>
@@ -64,10 +56,10 @@
                     <p class="text-primary font-mono text-sm mb-6">Lead Developer & Architect</p>
                     
                     <div class="flex flex-col gap-3">
-                        <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full py-3 rounded-lg bg-darkbg border border-borderline hover:border-primary transition-colors flex items-center justify-center gap-2 text-sm">
+                        <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full py-3 rounded-lg bg-darkbg border border-borderline hover:border-secondary transition-colors flex items-center justify-center gap-2 text-sm">
                             <i class="fa-brands fa-github text-lg"></i> GitHub Profile
                         </a>
-                        <a href="https://arvixos.online" target="_blank" class="w-full py-3 rounded-lg bg-darkbg border border-borderline hover:border-accent transition-colors flex items-center justify-center gap-2 text-sm">
+                        <a href="https://arvixos.online" target="_blank" class="w-full py-3 rounded-lg bg-darkbg border border-borderline hover:border-primary transition-colors flex items-center justify-center gap-2 text-sm">
                             <i class="fa-solid fa-globe text-lg"></i> Official Website
                         </a>
                     </div>
@@ -87,14 +79,14 @@
 
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div class="glass-card p-6 rounded-2xl">
-                        <i class="fa-solid fa-flag-checkered text-2xl text-accent mb-4"></i>
+                        <i class="fa-solid fa-flag-checkered text-2xl text-primary mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Project Genesis</h3>
                         <p class="text-sectext text-sm">Arvix OS was born out of a need for a unified platform that doesn't compromise aesthetic appeal for deep system control and security.</p>
                     </div>
                     <div class="glass-card p-6 rounded-2xl">
                         <i class="fa-solid fa-code-branch text-2xl text-secondary mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Core Focus</h3>
-                        <p class="text-sectext text-sm">Engineering a Debian base with a custom XFCE environment, optimizing kernel 6.12 to deliver maximum hardware efficiency.</p>
+                        <p class="text-sectext text-sm">Engineering a Debian base with a custom XFCE environment, optimizing kernel architecture to deliver maximum hardware efficiency.</p>
                     </div>
                 </div>
             </div>
