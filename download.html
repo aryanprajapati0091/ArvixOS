@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Arvix OS</title>
+    <title>Download Arvix OS - Project Shutdown</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,16 +15,22 @@
                 extend: { 
                     colors: { 
                         primary: '#00F0FF', secondary: '#A855F7', accent: '#3B82F6', 
-                        darkbg: '#030510', cardbg: '#0A0F24', borderline: 'rgba(168,85,247,0.15)', sectext: '#94A3B8'
+                        darkbg: '#030510', cardbg: '#0A0F24', borderline: 'rgba(168,85,247,0.15)', sectext: '#94A3B8',
+                        shutdown: '#EF4444' /* Red for shutdown */
                     }, 
                     fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
                     animation: {
                         'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'flicker': 'flicker 4s linear infinite',
                     },
                     keyframes: {
                         'pulse-glow': {
-                            '0%, 100%': { boxShadow: '0 0 20px rgba(168,85,247,0.2)' },
-                            '50%': { boxShadow: '0 0 50px rgba(0,240,255,0.6)' },
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(239,68,68,0.2)' },
+                            '50%': { boxShadow: '0 0 50px rgba(239,68,68,0.4)' },
+                        },
+                        'flicker': {
+                            '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': { opacity: '1' },
+                            '20%, 21.999%, 63%, 63.999%, 65%, 69.999%': { opacity: '0.4' }
                         }
                     }
                 } 
@@ -32,110 +38,60 @@
         }
     </script>
 </head>
-<body class="font-sans antialiased text-white">
+<body class="font-sans antialiased text-white grayscale-[20%]">
 
-    <div class="cyber-grid"></div>
-    <div class="aurora-glow"></div>
+    <div class="cyber-grid opacity-50"></div>
+    <div class="aurora-glow opacity-30"></div>
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 border-b border-borderline backdrop-blur-md bg-cardbg/50">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
-                <i class="fa-solid fa-shield-halved text-2xl text-primary"></i>
-                <span class="text-xl font-bold tracking-wider">ARVIX OS</span>
+                <i class="fa-solid fa-shield-halved text-2xl text-sectext"></i>
+                <span class="text-xl font-bold tracking-wider text-sectext">ARVIX OS</span>
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="index.html" class="text-sectext hover:text-white transition-colors">Home</a>
-                <a href="download.html" class="text-primary transition-colors">Download</a>
+                <a href="download.html" class="text-shutdown transition-colors">Download</a>
                 <a href="about.html" class="text-sectext hover:text-white transition-colors">About Developer</a>
                 <a href="contact.html" class="text-sectext hover:text-white transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-32 pb-12 px-6 flex flex-col items-center justify-center">
+    <section class="pt-32 pb-12 px-6 flex flex-col items-center justify-center min-h-[80vh]">
         <div class="text-center mb-12" data-aos="fade-down">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Get <span class="text-gradient">Arvix OS</span></h1>
-            <p class="text-sectext text-lg">Choose your preferred release below.</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Project <span class="text-shutdown animate-flicker">Shutdown</span> 💔</h1>
+            <p class="text-sectext text-lg">System offline. Development has been suspended.</p>
         </div>
 
-        <div class="w-full max-w-5xl">
-            <!-- VERSION 2.0 (UPCOMING HYPE) -->
-            <div class="glass-card p-10 rounded-3xl relative overflow-hidden mb-12 border-2 border-primary animate-pulse-glow" data-aos="zoom-in">
-                <div class="absolute top-0 right-0 bg-primary text-darkbg text-xs font-bold px-6 py-2 rounded-bl-2xl uppercase tracking-widest">Incoming Transmission</div>
+        <div class="w-full max-w-3xl">
+            <!-- SHUTDOWN NOTICE CARD -->
+            <div class="glass-card p-10 rounded-3xl relative overflow-hidden mb-12 border-2 border-shutdown/50 animate-pulse-glow" data-aos="zoom-in">
+                <div class="absolute top-0 right-0 bg-shutdown text-white text-xs font-bold px-6 py-2 rounded-bl-2xl uppercase tracking-widest">End of Line</div>
                 
-                <div class="grid md:grid-cols-2 gap-10 items-center relative z-10">
-                    <div>
-                        <h2 class="text-4xl font-bold mb-2 text-white drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">Version 2.0</h2>
-                        <p class="text-primary text-sm mb-6 font-mono tracking-wide">The next evolution is initiating.</p>
-                        
-                        <div class="space-y-4 mb-8 font-mono text-sm">
-                            <div class="flex justify-between border-b border-borderline pb-2">
-                                <span class="text-sectext">Launch Date</span>
-                                <span class="text-white font-bold animate-pulse">29 / 09 / 2026</span>
-                            </div>
-                            <div class="flex justify-between border-b border-borderline pb-2">
-                                <span class="text-sectext">Architecture</span>
-                                <span>64-bit (x86_64)</span>
-                            </div>
-                            <div class="flex justify-between border-b border-borderline pb-2">
-                                <span class="text-sectext">Status</span>
-                                <span class="text-secondary font-bold">Finalizing Build...</span>
-                            </div>
-                        </div>
+                <div class="text-center relative z-10 space-y-6">
+                    <i class="fa-solid fa-power-off text-6xl text-shutdown mb-2 animate-flicker drop-shadow-[0_0_15px_rgba(239,68,68,0.8)]"></i>
+                    
+                    <h2 class="text-3xl font-bold text-white">Development Paused Indefinitely</h2>
+                    
+                    <p class="text-sectext text-lg leading-relaxed max-w-2xl mx-auto">
+                        We are deeply saddened to announce that the Arvix OS project has been put on hold for now. 😔<br><br>
+                        Thank you to all the ethical hackers, developers, and power users who supported our vision and downloaded Version 1.0. Building this modern Debian-based distribution was an incredible journey, but we must pause our servers. 🥀
+                    </p>
+
+                    <div class="inline-block bg-darkbg/80 border border-borderline px-6 py-3 rounded-lg font-mono text-sm text-sectext mt-4">
+                        <i class="fa-solid fa-terminal mr-2"></i> root@arvixos:~# shutdown -h now
                     </div>
                     
-                    <div class="space-y-4">
-                        <button disabled class="w-full bg-darkbg/50 border border-primary/50 text-sectext py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 cursor-not-allowed relative overflow-hidden group">
-                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                            <i class="fa-solid fa-lock text-primary"></i> Unlocks on 29 Sept 2026
+                    <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button disabled class="w-full sm:w-auto bg-darkbg/80 border border-shutdown/30 text-shutdown/50 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 cursor-not-allowed">
+                            <i class="fa-solid fa-ban"></i> All Downloads Disabled
                         </button>
-                        <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full bg-transparent border border-secondary hover:border-white text-secondary hover:text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-3 transition-colors shadow-[0_0_15px_rgba(168,85,247,0.3)]">
-                            <i class="fa-brands fa-github text-xl"></i> Track Progress on GitHub
+                        <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full sm:w-auto bg-transparent border border-secondary hover:border-white text-secondary hover:text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-3 transition-colors shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                            <i class="fa-brands fa-github text-xl"></i> View GitHub Archive
                         </a>
                     </div>
                 </div>
-            </div>
-
-            <!-- REQUIREMENTS SECTION -->
-            <div class="grid md:grid-cols-2 gap-6 mb-16" data-aos="fade-up" data-aos-delay="100">
-                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-accent">
-                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-server text-accent"></i> Minimum Requirements
-                    </h3>
-                    <ul class="space-y-2 text-sm text-sectext">
-                        <li><strong class="text-white">RAM:</strong> 2 GB</li>
-                        <li><strong class="text-white">CPU:</strong> Dual-Core 64-bit Processor</li>
-                        <li><strong class="text-white">Storage:</strong> 25 GB free space</li>
-                    </ul>
-                </div>
-                
-                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
-                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-rocket text-primary"></i> Recommended
-                    </h3>
-                    <ul class="space-y-2 text-sm text-sectext">
-                        <li><strong class="text-white">RAM:</strong> 4 GB or higher</li>
-                        <li><strong class="text-white">CPU:</strong> Quad-Core 64-bit Processor</li>
-                        <li><strong class="text-white">Storage:</strong> 50 GB SSD</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- VERSION 1.0 (CURRENT STABLE) -->
-            <div class="text-center mb-8" data-aos="fade-up">
-                <h3 class="text-2xl font-bold">Current Stable Release</h3>
-                <p class="text-sectext text-sm">Download the highly acclaimed Version 1.0 Phoenix.</p>
-            </div>
-
-            <div class="glass-card p-8 rounded-2xl border border-secondary shadow-[0_4px_30px_rgba(168,85,247,0.1)] flex flex-col md:flex-row justify-between items-center gap-6" data-aos="fade-up">
-                <div>
-                    <h4 class="text-2xl font-bold mb-1">Version 1.0 (Phoenix)</h4>
-                    <p class="text-sectext text-sm font-mono">Released: July 2026 | ISO: ArvixOS-1.0-amd64.iso</p>
-                </div>
-                <!-- Updated Google Drive Direct Download Link for v1.0 -->
-                <a href="https://drive.google.com/file/d/1eQaEvxY8uwXpQq5txM6zHc1-3wn1hrQE/view?usp=sharing" target="_blank" class="w-full md:w-auto btn-neon bg-secondary text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-colors">
-                    <i class="fa-solid fa-download"></i> Download v1.0
-                </a>
             </div>
 
         </div>
